@@ -1,0 +1,12 @@
+.headerbar #search-box {
+      display: none !important;
+}
+.navbar #search-box{
+      box-shadow:none;
+}
+.navbar #button {
+      border-radius: 0px 4px 4px 0px;
+}
+.rtl .navbar #button {
+      border-radius: 4px 0px 0px 4px;
+}

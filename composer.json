@@ -1,9 +1,9 @@
 {
     "name": "hifikabin/navbarsearch",
     "type": "phpbb-extension",
-    "description": "Adds NavBar Search",
+    "description": "Adds NavBar Search which is a visual match to my Google Search Extension 1.5.x",
     "homepage": "http://phpbb.hifikabin.me.uk",
-    "version": "1.0.1",
+    "version": "1.0.9",
     "license": "GPL-2.0",
     "authors": [
         {
@@ -11,13 +11,6 @@
             "username": "HiFiKabin",
             "email": "webmaster@hifikabin.me.uk",
             "homepage": "http://phpbb.hifikabin.me.uk",
-            "role": "Developer"
-        },
-        {
-            "name": "David Wood",
-            "username": "david63",
-            "email": "david@webworld.xyz",
-            "homepage": "http://webworld.xyz",
             "role": "Developer"
         }
     ],
