@@ -2,8 +2,8 @@
     "name": "hifikabin/navbarsearch",
     "type": "phpbb-extension",
     "description": "Adds NavBar Search which is a visual match to my Google Search Extension 3.1.x NOTE This extension is for phpBB3.1.x ONLY",
-    "homepage": "https://github.com/MixingOnBeat/navbarsearch",
-    "version": "3.1.2",
+    "homepage": "http://phpbb.hifikabin.me.uk",
+    "version": "3.1.3",
     "license": "GPL-2.0",
     "authors": [
         {

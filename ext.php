@@ -15,19 +15,19 @@ namespace hifikabin\navbarsearch;
 class ext extends \phpbb\extension\base
 {
 	/**
-	 * Enable extension if phpBB version requirement is met
-	 *
-	 * @return bool
-	 * @access public
-	 */
+	* Enable extension if phpBB version requirement is met
+	*
+	* @return bool
+	* @access public
+	*/
 	public function is_enableable()
 	{
 		$enableable = phpbb_version_compare(PHPBB_VERSION, '3.1.4@dev', '>=') && phpbb_version_compare(PHPBB_VERSION, '3.2.0@dev', '<');
 		if (!$enableable)
 		{
-   $user = $this->container->get('user');
-			$user->add_lang_ext('hifikabin/navbarsearch', 'info_acp_navbarsearch');
-			trigger_error($user->lang('NAVBARSEARCH_REQUIRE_3.1.4'), E_USER_WARNING);
+            $user = $this->container->get('user');
+            $user->add_lang('acp/extensions');
+            trigger_error($user->lang('EXTENSION_NOT_ENABLEABLE'), E_USER_WARNING);
 		}
 
 		return true;
