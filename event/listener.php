@@ -19,46 +19,46 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 */
 class listener implements EventSubscriberInterface
 {
-   /** @var \phpbb\template\twig\twig */
-   protected $template;
+	/** @var \phpbb\template\twig\twig */
+	protected $template;
 
-   /**
-   * Constructor for listener
-   *
-   * @param \phpbb\config\config $config phpBB config
-   * @param \phpbb\template\twig\twig $template phpBB template
-   * @access public
-   */
-   public function __construct(\phpbb\template\twig\twig $template)
-   {
-      $this->template = $template;
-   }
+	/**
+	* Constructor for listener
+	*
+	* @param \phpbb\config\config $config phpBB config
+	* @param \phpbb\template\twig\twig $template phpBB template
+	* @access public
+	*/
+	public function __construct(\phpbb\template\twig\twig $template)
+	{
+		$this->template = $template;
+	}
 
-   /**
-   * Assign functions defined in this class to event listeners in the core
-   *
-   * @return array
-   * @static
-   * @access public
-   */
-   static public function getSubscribedEvents()
-   {
-      return array(
-         'core.page_header_after' => 'nav_bar_header',
-      );
-   }
+	/**
+	* Assign functions defined in this class to event listeners in the core
+	*
+	* @return array
+	* @static
+	* @access public
+	*/
+	static public function getSubscribedEvents()
+	{
+		return array(
+			'core.page_header_after' => 'nav_bar_header',
+		);
+	}
 
-   /**
-   * Update the template variables
-   *
-   * @param object $event The event object
-   * @return null
-   * @access public
-   */
-   public function nav_bar_header($event)
-   {
-      $this->template->assign_vars(array(
-         'S_IN_SEARCH' => true,
-      ));
-   }
+	/**
+	* Update the template variables
+	*
+	* @param object $event The event object
+	* @return null
+	* @access public
+	*/
+	public function nav_bar_header($event)
+	{
+		$this->template->assign_vars(array(
+			'S_IN_SEARCH' => true,
+		));
+	}
 }
